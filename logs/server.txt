@@ -1,0 +1,51 @@
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
+      User profile is available. Using 'C:\Users\CopelandT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+dbug: Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver[1]
+      Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+info: Microsoft.AspNetCore.Server.HttpSys.HttpSysListener[0]
+      Start
+info: Microsoft.AspNetCore.Server.HttpSys.HttpSysListener[0]
+      Listening on prefix: http://626FF2S:5000/
+Hosting environment: Development
+Content root path: C:\Users\CopelandT\Source\Repos\fetch-and-signalr-problem\SignalRProblem
+Now listening on: http://626FF2S:5000
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://626ff2s:5000/
+info: Microsoft.AspNetCore.Mvc.RazorPages.Internal.PageActionInvoker[1]
+      Route matched with {page = "/Index", action = "", controller = ""}. Executing action /Index
+info: Microsoft.AspNetCore.Mvc.RazorPages.Internal.PageActionInvoker[101]
+      Executing handler method OnGet with arguments ((null)) - ModelState is Valid
+info: Microsoft.AspNetCore.Mvc.RazorPages.Internal.PageActionInvoker[2]
+      Executed action /Index in 59.9984ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 219.9941ms 200 text/html; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://626ff2s:5000/api/values
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://626ff2s:5000/valuesHub/negotiate text/plain;charset=UTF-8 0
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager[1]
+      New connection jBVe51C-x-jCqtJyuFqJxw created.
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "Get", controller = "Values", page = ""}. Executing action SignalRProblem.Controllers.ValuesController.Get (SignalRProblem)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method SignalRProblem.Controllers.ValuesController.Get (SignalRProblem) - Validation state: Valid
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method SignalRProblem.Controllers.ValuesController.Get (SignalRProblem), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5431ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'System.String[]'.
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher[10]
+      Sending negotiation response.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 65.9725ms 200 application/json
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://626ff2s:5000/valuesHub?id=jBVe51C-x-jCqtJyuFqJxw
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher[4]
+
+      Establishing new connection.
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action SignalRProblem.Controllers.ValuesController.Get (SignalRProblem) in 64.6287ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 98.0789ms 200 application/json; charset=utf-8
+dbug: Microsoft.AspNetCore.SignalR.HubConnectionHandler[5]
+      OnConnectedAsync started.

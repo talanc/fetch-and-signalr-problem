@@ -1,0 +1,6 @@
+signalr.js:1889 Information: Normalizing '/valuesHub' to 'http://626ff2s:5000/valuesHub'.
+signalr.js:1893 Debug: Starting HubConnection.
+signalr.js:1893 Debug: Starting connection with transfer format 'Text'.
+signalr.js:1893 Debug: Sending negotiation request: http://626ff2s:5000/valuesHub/negotiate
+signalr.js:1893 Debug: Selecting transport 'ServerSentEvents'
+signalr.js:1893 Trace: (SSE transport) Connecting

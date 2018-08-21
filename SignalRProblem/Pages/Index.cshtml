@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignalRProblem</title>
+</head>
+<body>
+    <div class="container body-content">
+        <h1>Fetch Results</h1>
+        <p id="fetch-results">Getting fetch results...</p>
+
+        <h1>SignalR Results</h1>
+        <p id="signalr-results">Getting SignalR results...</p>
+    </div>
+
+    <script src="~/signalr.js"></script>
+    <script>
+        var fetch_results = document.getElementById("fetch-results");
+        var signalr_results = document.getElementById("signalr-results");
+
+        // api controller
+        fetch("api/values")
+            .then(function (response) {
+                return response.json();
+
+            })
+            .then(function (json) {
+                fetch_results.textContent = json;
+            });
+
+        // signalr
+        var connection = new signalR.HubConnectionBuilder()
+            .withUrl("/valuesHub")
+            .configureLogging(signalR.LogLevel.Trace)
+            .build();
+        connection.on("values", function (values) {
+            signalr_results.textContent = JSON.stringify(values);
+        });
+        connection.start();
+        
+    </script>
+</body>
+</html>

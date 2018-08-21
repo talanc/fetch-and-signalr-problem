@@ -11,6 +11,9 @@ testing problems with signalr using a computer name instead of localhost
 I think I've narrowed the problem down to using HTTP.sys
 
 Kestrel + localhost: Works
+
 Kestrel + compname: Works
+
 Http.Sys + localhost: Works
+
 Http.Sys + compname: Doesn't work...

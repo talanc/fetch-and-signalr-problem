@@ -8,12 +8,26 @@ testing problems with signalr using a computer name instead of localhost
 - Start program, expect results from fetch but not signalR
 
 # Notes
-I think I've narrowed the problem down to using HTTP.sys
+Kestrel works, HTTP.sys doesn't.
 
-Kestrel + localhost: Works
+### Tests
+Windows 7 Workstation:
+Doesn't work
 
-Kestrel + compname: Works
+Windows 7 Server VM:
+Doesn't work
 
-Http.Sys + localhost: Works
+Windows 10 Home Computer:
+Works
 
-Http.Sys + compname: Doesn't work...
+Windows 10 Home Computer, Windows 7 VM:
+Works
+
+Windows 10 Workstation:
+???
+
+Windows 7 Workstation, 2.2 Preview:
+???
+
+Windows 7 Workstation, not on corporate network:
+???
